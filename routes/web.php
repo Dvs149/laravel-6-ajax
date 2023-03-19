@@ -19,6 +19,6 @@ Route::get('/', function () {
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('ajaxposts','PostAjaxController');
-    Route::get('image-upload', 'ImageController@index');
-    Route::post('image-upload', 'ImageController@store')->name('image.store');
+Route::resource('ajaxposts', 'PostAjaxController');
+Route::get('image-upload', 'ImageController@index');
+Route::post('image-upload', 'ImageController@store')->name('image.store');
