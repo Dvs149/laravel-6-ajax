@@ -65,7 +65,8 @@
 
                     $('#postForm').trigger("reset");
                     $('#ajaxModelexa').modal('hide');
-                    table.draw();
+                    // table.draw();
+                    table.row( this ).remove().draw( false );
                     $('#savedata').html('Save Post');
                 },
                 error: function(data) {
@@ -84,7 +85,8 @@
                 type: "DELETE",
                 url: "{{ route('ajaxposts.store') }}" + '/' + id,
                 success: function(data) {
-                    table.draw();
+                    // table.draw();
+                    table.row( this ).remove().draw( false );
                 },
                 error: function(data) {
                     console.log('Error:', data);
